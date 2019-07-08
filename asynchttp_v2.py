@@ -7,7 +7,7 @@ import json
 pairs =    ['btc_idr', 'bts_idr','doge_idr','eth_idr','ltc_idr','nxt_idr','sumo_idr','ten_idr','xrp_idr',
                       'bts_btc','doge_btc','eth_btc','ltc_btc','nxt_btc','sumo_btc','ten_btc','xrp_btc', 'summaries']
 """
-def notify_channel(session, text):
+async def notify_channel(session, text):
     proxy = None
     url = 'https://api.telegram.org/bot[YOUR TELEGRAM BOT TOKEN]/sendMessage?chat_id=@[YOUR TELEGRAM CHANNEL]&text=' + text
     async with session.get(url, proxy=proxy) as response:
